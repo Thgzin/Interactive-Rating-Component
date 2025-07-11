@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
   /* Primary */
   --color-orange-500: hsl(25, 97%, 53%);
@@ -9,8 +11,6 @@
   --color-grey-950: hsl(216, 12%, 8%);
 }
 
-body {
-} /* 1. Use a more-intuitive box-sizing model */
 *,
 *::before,
 *::after {
@@ -87,15 +87,119 @@ h6 {
 }
 
 body {
-  background-color: #0e1012;
+  background-color: rgb(14, 16, 18);
+  font-family: "Overpass", sans-serif;
 }
 
 .box {
-  width: 350px;
-  height: 350px;
-  background-color: hsl(213.33deg 17.65% 10%);
+  width: 410px;
+  height: 410px;
+  background-image: linear-gradient(
+    var(--darkreader-background-1d232a, #171c22),
+    var(--darkreader-background-181b21, #13161a)
+  );
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
+
+.star-section {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-grey-900);
+  margin-left: 25px;
+  margin-top: 35px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content h3 {
+  margin-left: 25px;
+  margin-top: 35px;
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.main-content p {
+  font-size: 14px;
+  color: var(--color-grey-500);
+  max-width: 350px;
+  margin-left: 25px;
+  margin-top: 15px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.count-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -65px;
+}
+
+.count {
+  width: 48px;
+  height: 48px;
+  background-color: rgb(30, 36, 44);
+  color: var(--color-white);
+  margin-left: 25px;
+  margin-top: 35px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.count:hover {
+  background-color: var(--color-grey-500);
+  transition: all ease-in-out 0.7s;
+}
+
+.count:active {
+  background-color: var(--color-orange-500);
+  transition: all ease-in-out 0.7s;
+}
+
+.submit-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 9.5rem;
+  width: 80%;
+  border: none;
+  padding: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 25px;
+  color: var(--color-white);
+  background-color: var(--color-orange-500);
+}
+
+.submit-btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-orange-500);
+  transition: all ease 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 360px;
+    height: 420px;
+  }
 }
