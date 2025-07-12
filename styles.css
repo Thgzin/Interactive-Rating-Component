@@ -142,7 +142,11 @@ body {
   margin-left: -65px;
 }
 
-.count {
+.count1,
+.count2,
+.count3,
+.count4,
+.count5 {
   width: 48px;
   height: 48px;
   background-color: rgb(30, 36, 44);
@@ -159,14 +163,34 @@ body {
   cursor: pointer;
 }
 
-.count:hover {
+
+
+.count1:hover,
+.count2:hover,
+.count3:hover,
+.count4:hover,
+.count5:hover {
   background-color: var(--color-grey-500);
-  transition: all ease-in-out 0.7s;
 }
 
-.count:active {
+.activeClass {
   background-color: var(--color-orange-500);
-  transition: all ease-in-out 0.7s;
+}
+
+.count1:active,
+.count2:active,
+.count3:active,
+.count4:active,
+.count5:active {
+  background-color: var(--color-orange-500);
+}
+
+.count1.activeClass,
+.count2.activeClass,
+.count3.activeClass,
+.count4.activeClass,
+.count5.activeClass {
+  background-color: var(--color-orange-500);
 }
 
 .submit-btn {
