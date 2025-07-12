@@ -8,9 +8,25 @@ const activeClass = document.createElement("activeClass");
 
 const counts = [firstCount, secondCount, thirdCount, fourthCount, fifthCount];
 
-counts.forEach((items) => {
-  items.addEventListener("click", () => {
-    counts.forEach((item) => item.classList.remove("activeClass"));
-    items.classList.add("activeClass");
+function handleItemSelection() {
+  counts.forEach((items) => {
+    items.addEventListener("click", () => {
+      counts.forEach((item) => item.classList.remove("activeClass"));
+      items.classList.add("activeClass");
+    });
   });
-});
+}
+handleItemSelection();
+
+function getValue() {
+  button.addEventListener("click", () => {
+    const selectedItem = Array.from(counts).find((item) =>
+      item.classList.contains("activeClass")
+    );
+    if (selectedItem) {
+      const selectValue = selectedItem.textContent;
+      console.log(selectValue);
+    }
+  });
+}
+getValue();
