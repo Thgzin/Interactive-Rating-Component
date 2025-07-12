@@ -94,9 +94,11 @@ body {
 .box {
   width: 410px;
   height: 410px;
-  background-image: linear-gradient(
-    var(--darkreader-background-1d232a, #171c22),
-    var(--darkreader-background-181b21, #13161a)
+  background: #191e23;
+  background: linear-gradient(
+    0deg,
+    rgba(25, 30, 35, 1) 17%,
+    rgba(37, 45, 54, 1) 89%
   );
   position: absolute;
   top: 50%;
@@ -105,10 +107,19 @@ body {
   border-radius: 20px;
 }
 
+.js-box {
+  opacity: 1;
+  transition: opacity 0.7s ease;
+}
+
+.js-box.fade-out {
+  opacity: 0;
+}
+
 .star-section {
   width: 40px;
   height: 40px;
-  background-color: var(--color-grey-900);
+  background-color: #29323d;
   margin-left: 25px;
   margin-top: 35px;
   border-radius: 30px;
@@ -149,7 +160,7 @@ body {
 .count5 {
   width: 48px;
   height: 48px;
-  background-color: rgb(30, 36, 44);
+  background-color: #29323d;
   color: var(--color-white);
   margin-left: 25px;
   margin-top: 35px;
@@ -162,8 +173,6 @@ body {
   justify-content: center;
   cursor: pointer;
 }
-
-
 
 .count1:hover,
 .count2:hover,
@@ -209,6 +218,7 @@ body {
   border-radius: 25px;
   color: var(--color-white);
   background-color: var(--color-orange-500);
+  cursor: pointer;
 }
 
 .submit-btn:hover {
@@ -217,8 +227,88 @@ body {
   transition: all ease 0.4s;
 }
 
+.rate-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  margin-top: 9.5rem;
+  border: none;
+  padding: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 25px;
+  color: var(--color-white);
+  background-color: var(--color-orange-500);
+  cursor: pointer;
+}
+
+.rate-btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-orange-500);
+  transition: all ease 0.4s;
+}
+
+.thankYou-image {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.response-section {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  padding: 5px;
+  border-radius: 15px;
+  color: var(--color-orange-500);
+  background-color: var(--color-grey-900);
+}
+
+.response-txt {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 210px;
+  text-align: center;
+}
+
+.appreciate-txt {
+  text-align: center;
+  max-width: 270px;
+}
+
+.rating-section p {
+  font-size: 14px;
+  color: var(--color-grey-500);
+  max-width: 350px;
+  margin-left: 25px;
+  margin-top: 15px;
+  word-wrap: break-word;
+  white-space: normal;
+  color: var(--color-grey-500);
+}
+
 @media screen and (max-width: 768px) {
   .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 360px;
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .js-box {
     display: flex;
     flex-direction: column;
     align-items: center;
